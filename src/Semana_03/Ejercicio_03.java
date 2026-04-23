@@ -60,11 +60,8 @@ public class Ejercicio_03 {
     }
     public void TiempodeOrdenamiento(int v[]){
         long inicio =  System.nanoTime();
-         v[];
         long fin = System.nanoTime();
-        return fin - inicio;
-        
-    }
+        }
     public static void main(String[] args) {
         int v[]={6,8,5,7,7,14,15};
         view(v);

@@ -15,7 +15,6 @@ package Semana_02;
     Se espera: Mostrar la matriz y las sumas correspondientes.
     */
     import java.util.Random;
-
     public class Ejercicio_23 {
         public static void main(String[] args){
             Random crea = new Random();
@@ -30,7 +29,6 @@ package Semana_02;
                     matriz[i][j] = crea.nextInt(10) + 1;
                 }
             }
-
             System.out.print("La matriz " + m + "x" + n + " : \n");
             for(int i = 0; i < m; i++){
                 int sumaFila = 0;
@@ -40,7 +38,6 @@ package Semana_02;
                 }
                 System.out.println("| Suma Fila: " + sumaFila);
             }
-            
             for(int i = 0; i < n * 8; i++){
                 System.out.print("-");
             }
