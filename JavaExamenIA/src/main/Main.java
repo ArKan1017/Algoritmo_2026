@@ -9,9 +9,12 @@ package main;
  * @author LENOVO
  */
 import vista.VentanaPrincipal;
+import controlador.TareaControlador;
+
 public class Main {
     public static void main(String[] args){
         VentanaPrincipal vista = new VentanaPrincipal();
+        TareaControlador controlador = new TareaControlador(vista);
         vista.setVisible(true);
     }
 }

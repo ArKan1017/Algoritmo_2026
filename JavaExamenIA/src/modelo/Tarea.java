@@ -11,17 +11,17 @@ package modelo;
 import java.time.LocalDate;
 
 public class Tarea {
-    // Atributos privados
+    
     private String codigo;
     private String titulo;
     private String curso;
     private LocalDate fechaEntrega;
     private String estado;
 
-    // Constructor vacío
+    
     public Tarea() {}
 
-    // Constructor con parámetros
+    
     public Tarea(String codigo, String titulo, String curso, LocalDate fechaEntrega, String estado) {
         this.codigo = codigo;
         this.titulo = titulo;
@@ -30,7 +30,7 @@ public class Tarea {
         this.estado = estado;
     }
 
-    // Getters y Setters
+    
     public String getCodigo() { return codigo; }
     public void setCodigo(String codigo) { this.codigo = codigo; }
 

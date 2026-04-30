@@ -14,7 +14,7 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 
 public class VentanaPrincipal extends JFrame {
-    // Componentes públicos para que el controlador pueda acceder
+    
     public JTextField txtCodigo;
     public JTextField txtTitulo;
     public JTextField txtCurso;
@@ -30,7 +30,7 @@ public class VentanaPrincipal extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
-        // Panel principal
+        
         JPanel panelFormulario = new JPanel(new GridLayout(6, 2, 5, 5));
 
         txtCodigo = new JTextField();
@@ -53,12 +53,12 @@ public class VentanaPrincipal extends JFrame {
         panelFormulario.add(new JLabel(""));
         panelFormulario.add(btnRegistrar);
 
-        // Tabla para mostrar tareas
+        
         modeloTabla = new DefaultTableModel(new Object[]{"Código", "Título", "Curso", "Fecha", "Estado"}, 0);
         tablaTareas = new JTable(modeloTabla);
         JScrollPane scrollTabla = new JScrollPane(tablaTareas);
 
-        // Layout principal
+        
         setLayout(new BorderLayout());
         add(panelFormulario, BorderLayout.NORTH);
         add(scrollTabla, BorderLayout.CENTER);
