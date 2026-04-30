@@ -8,7 +8,6 @@ package vista;
  *
  * @author LENOVO
  */
-
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
@@ -21,6 +20,10 @@ public class VentanaPrincipal extends JFrame {
     public JTextField txtFecha;
     public JComboBox<String> cmbEstado;
     public JButton btnRegistrar;
+    public JButton btnEliminar;
+    public JTextField txtBuscar;
+    public JButton btnBuscar;
+
     public JTable tablaTareas;
     public DefaultTableModel modeloTabla;
 
@@ -32,7 +35,6 @@ public class VentanaPrincipal extends JFrame {
 
         
         JPanel panelFormulario = new JPanel(new GridLayout(6, 2, 5, 5));
-
         txtCodigo = new JTextField();
         txtTitulo = new JTextField();
         txtCurso = new JTextField();
@@ -54,6 +56,16 @@ public class VentanaPrincipal extends JFrame {
         panelFormulario.add(btnRegistrar);
 
         
+        JPanel panelAcciones = new JPanel(new FlowLayout());
+        txtBuscar = new JTextField(15);
+        btnBuscar = new JButton("Buscar");
+        btnEliminar = new JButton("Eliminar");
+        panelAcciones.add(new JLabel("Buscar (código/título):"));
+        panelAcciones.add(txtBuscar);
+        panelAcciones.add(btnBuscar);
+        panelAcciones.add(btnEliminar);
+
+        
         modeloTabla = new DefaultTableModel(new Object[]{"Código", "Título", "Curso", "Fecha", "Estado"}, 0);
         tablaTareas = new JTable(modeloTabla);
         JScrollPane scrollTabla = new JScrollPane(tablaTareas);
@@ -62,8 +74,10 @@ public class VentanaPrincipal extends JFrame {
         setLayout(new BorderLayout());
         add(panelFormulario, BorderLayout.NORTH);
         add(scrollTabla, BorderLayout.CENTER);
+        add(panelAcciones, BorderLayout.SOUTH);
     }
 }
+
 
 
 
